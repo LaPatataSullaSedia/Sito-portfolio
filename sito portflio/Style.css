@@ -1,0 +1,136 @@
+#generale{
+    background-color: #fff8f7;
+}
+
+.navbar {
+    background-color: #fca798;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 7px 1px;
+}
+.titolo{
+    font-size: 120px;
+    margin-top: 200px;
+    text-align: center;
+    color: #ff4929;
+    
+}
+.navbtn {
+    float: left;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 180px;
+    background-color: #ff7158;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+.navbtn:hover{
+    box-shadow: 0 4px 8px 0 rgba(173, 0, 0, 0.4);
+    background-color: #dd2808;
+    color: #ffffff;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.show {
+    display: block;
+}
+.home{
+    float: left;
+    display: inline-block;
+    border-radius: 20px;
+    width: 100px;
+    height: 42px;
+    background-color: #ff4625;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.3s, box-shadow 0.3s;
+}
+.imghome{
+    border-top: 5px;
+    width: 25px;
+}
+.home:hover{ 
+    box-shadow: 0 4px 8px 0 rgba(173, 0, 0, 0.4);
+}
+.contenitore{
+    border-radius: 20px;
+    margin-top: 200px;
+    background-color: #fca798;
+    height: 450px;
+    
+}
+.contenitore-bi{
+    border-radius: 20px;
+    margin-top: 60px;
+    background-color: #ffffff00;
+    height: 450px;
+    text-align: center;
+}
+.imgme{
+    width: 400px;height: 450px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    float: right;
+}
+.scritte{
+    width: 300px;
+    float: left;
+    margin-left: 40px;
+    font-size: larger;
+    border-left: 20px;
+}
+.container {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+}
+.slide {
+    flex: 0 0 auto;
+    width: 100px; /* Larghezza dei singoli div */
+    height: 100px; /* Altezza dei singoli div */
+    margin: 0 5px; /* Spazio tra i div */
+    background-color: lightblue;
+    transition: transform 0.7s ease; /* Aggiungiamo una transizione al movimento */
+}
+.arrow {
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+.left-arrow {
+    left: 0;
+}
+.right-arrow {
+    right: 0;
+}

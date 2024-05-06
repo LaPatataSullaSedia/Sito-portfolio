@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="Style.css">
+        <link rel="shortcut icon" href="---------" type="image/x-icon">   
+        <title></title>
+    </head>
+    <body id="generale">
+        <div class="navbar">
+            <button class="navbtn" onclick="toggleMenu(1)">I MIEI PROGETTI</button>
+            <div class="dropdown-content" id="menu1">
+                <a href="#">Opzione 1</a>
+                <a href="#">Opzione 2</a>
+                <a href="#">Opzione 3</a>
+            </div>
+            <button class="navbtn" onclick="toggleMenu(2)">I MIEI STUDI</button>
+            <div class="dropdown-content" id="menu2">
+                <a href="#">Opzione 1</a>
+                <a href="#">Opzione 2</a>
+                <a href="#">Opzione 3</a>
+            </div>
+            <button class="home" onclick="ricarica()"><img class="imghome" src="IMG/home_logo.png"></button>
+            <button class="navbtn" onclick="toggleMenu(2)">TEMPO LIBERO</button>
+            <div class="dropdown-content" id="menu2">
+                <a href="#">Opzione 1</a>
+                <a href="#">Opzione 2</a>
+                <a href="#">Opzione 3</a>
+            </div>
+            <button class="navbtn" onclick="toggleMenu(2)">CONTATTAMI</button>
+            <div class="dropdown-content" id="menu2">
+                <a href="#">Opzione 1</a>
+                <a href="#">Opzione 2</a>
+                <a href="#">Opzione 3</a>
+            </div>
+            </div>
+        <h1 class="titolo">Benvenuto</h1>
+        <div class="contenitore">
+            <div class="scritte">
+                <h2>Chi sono io?</h2>
+                <p>Mi chiamo simone marro, sono un ragazzo appasionaqto di informatica mi piace vedere come le cose sui modificano crazzie solo all pressione di un certo numero di tasti, qui volgio racchiudere i miei ricordi di come ho passato un anno scolastico perfetto e pieno di nuove esperienze. Ringrazzio in particolare i professori che si sono impegnati ad insegnarmi tale materia(professor Adduci e professor Palano)</p>
+                <br><p>THE END ///</p>
+            </div>
+            <div ><img class="imgme" src="IMG/me.jpg"></div>
+        </div>
+        <div class="contenitore-bi">
+            <h1>DAI UN OCCHIATA AI MIEI PROGETTI</h1>
+            <p>esplora i capolavori che ho realizzato durante tutto questo anno</p>
+            
+            <div class="container" id="container">
+                <div class="slide">1</div>
+                <div class="slide">2</div>
+                <div class="slide">3</div>
+                <div class="slide">4</div>
+                <div class="slide">5</div>
+                <!-- Aggiungi più div slide se necessario -->
+            </div>
+            <div class="arrow left-arrow" onclick="scrollLeft()">&#10094;</div>
+            <div class="arrow right-arrow" onclick="scrollRight()">&#10095;</div>
+        
+        </div>
+        <div class="contenitore">  
+            <div class="img"><img src=""></div>
+            <div class="scritte">
+            
+            </div>
+        </div>
+    </body>
+    <footer>
+
+    </footer>
+    <script>
+function toggleMenu(menuNumber) {
+    var menu = document.getElementById("menu" + menuNumber);
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        // Nascondi tutti i menu aperti prima di mostrare questo menu
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].style.display = "none";
+        }
+        menu.style.display = "block";
+    }
+}
+
+// Chiudi il menu se l'utente clicca altrove nella pagina
+window.onclick = function(event) {
+    if (!event.target.matches('.navbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        for (var i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.style.display === "block") {
+                openDropdown.style.display = "none";
+            }
+        }
+    }
+}
+const container = document.getElementById('container');
+
+function scrollLeft() {
+    if(container.firstElementChild === container.children[0]) {
+        container.appendChild(container.firstElementChild);
+    } else {
+        container.insertBefore(container.lastElementChild, container.firstElementChild);
+    }
+}
+
+    function scrollRight() {
+        container.appendChild(container.firstElementChild);
+    }
+    </script>
+</html>
